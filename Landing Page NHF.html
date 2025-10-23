@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MaternalCare - Pregnancy Health Companion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+      body {
+        font-family: "Poppins", sans-serif;
+
+        background-color: #f9fafb;
+      }
+      .gradient-bg {
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      }
+      .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body class="antialiased">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm fixed w-full z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+          <div class="flex items-center">
+            <div class="shrink-0 flex items-center">
+              <i data-feather="heart" class="text-pink-500 h-6 w-6"></i>
+              <span class="ml-2 font-bold text-gray-800">MaternalCare</span>
+            </div>
+          </div>
+          <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
+            <a
+              href="#features"
+              class="text-gray-600 hover:text-pink-500 px-3 py-2 text-sm font-medium"
+              >Features</a
+            >
+            <a
+              href="#how-it-works"
+              class="text-gray-600 hover:text-pink-500 px-3 py-2 text-sm font-medium"
+              >How It Works</a
+            >
+            <a
+              href="#contact"
+              class="text-gray-600 hover:text-pink-500 px-3 py-2 text-sm font-medium"
+              >Contact</a
+            >
+            <a
+              href="#download"
+              class="bg-pink-500 hover:bg-pink-600 text-white px-4 py-2 rounded-md text-sm font-medium"
+              >Download App</a
+            >
+          </div>
+          <div class="-mr-2 flex items-center md:hidden">
+            <button
+              type="button"
+              id="mobile-menu-button"
+              class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-pink-500"
+            >
+              <i data-feather="menu" class="h-6 w-6"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a
+            href="#features"
+            class="text-gray-600 hover:text-pink-500 block px-3 py-2 rounded-md text-base font-medium"
+            >Features</a
+          >
+          <a
+            href="#how-it-works"
+            class="text-gray-600 hover:text-pink-500 block px-3 py-2 rounded-md text-base font-medium"
+            >How It Works</a
+          >
+          <a
+            href="#contact"
+            class="text-gray-600 hover:text-pink-500 block px-3 py-2 rounded-md text-base font-medium"
+            >Contact</a
+          >
+          <a
+            href="#download"
+            class="bg-pink-500 hover:bg-pink-600 text-white block px-3 py-2 rounded-md text-base font-medium"
+            >Download App</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="gradient-bg pt-24 pb-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
+          <div class="mt-12 sm:mt-16 lg:mt-0" data-aos="fade-right">
+            <h1
+              class="text-4xl font-extrabold text-gray-900 sm:text-5xl sm:leading-tight"
+            >
+              <span class="block">Smart Pregnancy</span>
+              <span class="block text-pink-500">Care Companion</span>
+            </h1>
+            <p class="mt-3 text-xl text-gray-600">
+              Empowering pregnant women and healthcare providers with a
+              bilingual, offline-first mobile solution for better maternal
+              health outcomes.
+            </p>
+            <div class="mt-8 sm:flex">
+              <div class="rounded-md shadow">
+                <a
+                  href="#download"
+                  class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-pink-500 hover:bg-pink-600 md:py-4 md:text-lg md:px-10"
+                >
+                  Download Now
+                </a>
+              </div>
+              <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
+                <a
+                  href="#features"
+                  class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-pink-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10"
+                >
+                  Learn More
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="mt-12 sm:mt-16 lg:mt-0 relative" data-aos="fade-left">
+            <div class="bg-white rounded-xl shadow-xl transform rotate-1 p-1">
+              <img
+                class="rounded-lg"
+                src="http://static.photos/medical/640x360/1"
+                alt="App screenshot"
+              />
+            </div>
+            <div
+              class="absolute -bottom-8 -left-8 bg-pink-100 rounded-xl shadow-xl w-32 h-32 -z-10"
+            ></div>
+            <div
+              class="absolute -top-8 -right-8 bg-blue-100 rounded-xl shadow-xl w-32 h-32 -z-10"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section -->
+    <div id="features" class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h2
+            class="text-3xl font-extrabold text-gray-900 sm:text-4xl"
+            data-aos="fade-up"
+          >
+            Comprehensive Pregnancy Support
+          </h2>
+          <p
+            class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            Designed for both pregnant women and healthcare providers with
+            innovative features
+          </p>
+        </div>
+
+        <div class="mt-16">
+          <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <!-- Feature 1 -->
+            <div class="pt-6" data-aos="fade-up" data-aos-delay="200">
+              <div
+                class="flow-root bg-gray-50 rounded-lg px-6 pb-8 h-full feature-card transition-all duration-300 ease-in-out"
+              >
+                <div class="-mt-6">
+                  <div>
+                    <span
+                      class="inline-flex items-center justify-center p-3 bg-pink-500 rounded-md shadow-lg"
+                    >
+                      <i data-feather="calendar" class="h-6 w-6 text-white"></i>
+                    </span>
+                  </div>
+                  <h3
+                    class="mt-8 text-lg font-medium text-gray-900 tracking-tight"
+                  >
+                    Antenatal Tracking
+                  </h3>
+                  <p class="mt-5 text-base text-gray-500">
+                    Automated visit reminders, EDD calculator, and personalized
+                    care plans based on pregnancy stage and risk factors.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="pt-6" data-aos="fade-up" data-aos-delay="300">
+              <div
+                class="flow-root bg-gray-50 rounded-lg px-6 pb-8 h-full feature-card transition-all duration-300 ease-in-out"
+              >
+                <div class="-mt-6">
+                  <div>
+                    <span
+                      class="inline-flex items-center justify-center p-3 bg-blue-500 rounded-md shadow-lg"
+                    >
+                      <i data-feather="activity" class="h-6 w-6 text-white"></i>
+                    </span>
+                  </div>
+                  <h3
+                    class="mt-8 text-lg font-medium text-gray-900 tracking-tight"
+                  >
+                    Vitals Monitoring
+                  </h3>
+                  <p class="mt-5 text-base text-gray-500">
+                    Track blood pressure, weight, fundal height, and fetal heart
+                    rate with visual trends and danger sign alerts.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="pt-6" data-aos="fade-up" data-aos-delay="400">
+              <div
+                class="flow-root bg-gray-50 rounded-lg px-6 pb-8 h-full feature-card transition-all duration-300 ease-in-out"
+              >
+                <div class="-mt-6">
+                  <div>
+                    <span
+                      class="inline-flex items-center justify-center p-3 bg-green-500 rounded-md shadow-lg"
+                    >
+                      <i
+                        data-feather="book-open"
+                        class="h-6 w-6 text-white"
+                      ></i>
+                    </span>
+                  </div>
+                  <h3
+                    class="mt-8 text-lg font-medium text-gray-900 tracking-tight"
+                  >
+                    Bilingual Education
+                  </h3>
+                  <p class="mt-5 text-base text-gray-500">
+                    Gestational week-by-week information in English or Yoruba
+                    with audio narration support for low-literacy users.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="pt-6" data-aos="fade-up" data-aos-delay="200">
+              <div
+                class="flow-root bg-gray-50 rounded-lg px-6 pb-8 h-full feature-card transition-all duration-300 ease-in-out"
+              >
+                <div class="-mt-6">
+                  <div>
+                    <span
+                      class="inline-flex items-center justify-center p-3 bg-purple-500 rounded-md shadow-lg"
+                    >
+                      <i
+                        data-feather="message-square"
+                        class="h-6 w-6 text-white"
+                      ></i>
+                    </span>
+                  </div>
+                  <h3
+                    class="mt-8 text-lg font-medium text-gray-900 tracking-tight"
+                  >
+                    Smart Chatbot
+                  </h3>
+                  <p class="mt-5 text-base text-gray-500">
+                    AI-powered bilingual assistant for symptom checking, FAQ,
+                    and emergency triage with PHC alert capabilities.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Feature 5 -->
+            <div class="pt-6" data-aos="fade-up" data-aos-delay="300">
+              <div
+                class="flow-root bg-gray-50 rounded-lg px-6 pb-8 h-full feature-card transition-all duration-300 ease-in-out"
+              >
+                <div class="-mt-6">
+                  <div>
+                    <span
+                      class="inline-flex items-center justify-center p-3 bg-yellow-500 rounded-md shadow-lg"
+                    >
+                      <i data-feather="users" class="h-6 w-6 text-white"></i>
+                    </span>
+                  </div>
+                  <h3
+                    class="mt-8 text-lg font-medium text-gray-900 tracking-tight"
+                  >
+                    Provider Dashboard
+                  </h3>
+                  <p class="mt-5 text-base text-gray-500">
+                    PHC staff can track patients, view high-risk alerts, manage
+                    referrals, and export NHMIS/DHIS2 compatible reports.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Feature 6 -->
+            <div class="pt-6" data-aos="fade-up" data-aos-delay="400">
+              <div
+                class="flow-root bg-gray-50 rounded-lg px-6 pb-8 h-full feature-card transition-all duration-300 ease-in-out"
+              >
+                <div class="-mt-6">
+                  <div>
+                    <span
+                      class="inline-flex items-center justify-center p-3 bg-red-500 rounded-md shadow-lg"
+                    >
+                      <i data-feather="wifi-off" class="h-6 w-6 text-white"></i>
+                    </span>
+                  </div>
+                  <h3
+                    class="mt-8 text-lg font-medium text-gray-900 tracking-tight"
+                  >
+                    Offline-First
+                  </h3>
+                  <p class="mt-5 text-base text-gray-500">
+                    Fully functional without internet, with automatic background
+                    sync when connection is restored using Supabase.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- How It Works Section -->
+    <div id="how-it-works" class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="lg:text-center">
+          <h2
+            class="text-3xl font-extrabold text-gray-900 sm:text-4xl"
+            data-aos="fade-up"
+          >
+            How MaternalCare Works
+          </h2>
+          <p
+            class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            A seamless experience for both patients and healthcare providers
+          </p>
+        </div>
+
+        <div class="mt-20">
+          <div class="space-y-20">
+            <!-- Step 1 -->
+            <div
+              class="md:flex md:items-center md:space-x-8"
+              data-aos="fade-up"
+            >
+              <div class="md:w-1/2">
+                <img
+                  class="rounded-lg shadow-xl"
+                  src="http://static.photos/technology/640x360/2"
+                  alt="App screenshot"
+                />
+              </div>
+              <div class="mt-8 md:mt-0 md:w-1/2">
+                <div class="flex items-center">
+                  <div
+                    class="flex items-center justify-center h-12 w-12 rounded-md bg-pink-500 text-white font-bold text-xl"
+                  >
+                    1
+                  </div>
+                  <h3 class="ml-4 text-xl font-bold text-gray-900">
+                    Simple Registration
+                  </h3>
+                </div>
+                <p class="mt-4 text-gray-600">
+                  Pregnant women register with phone number via OTP. Healthcare
+                  providers use email/password with optional 2FA. Role-based
+                  access ensures data security.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div
+              class="md:flex md:items-center md:space-x-8"
+              data-aos="fade-up"
+            >
+              <div class="md:order-2 md:w-1/2">
+                <img
+                  class="rounded-lg shadow-xl"
+                  src="http://static.photos/medical/640x360/3"
+                  alt="App screenshot"
+                />
+              </div>
+              <div class="mt-8 md:mt-0 md:order-1 md:w-1/2">
+                <div class="flex items-center">
+                  <div
+                    class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white font-bold text-xl"
+                  >
+                    2
+                  </div>
+                  <h3 class="ml-4 text-xl font-bold text-gray-900">
+                    Personalized Tracking
+                  </h3>
+                </div>
+                <p class="mt-4 text-gray-600">
+                  Enter LMP to calculate EDD. Track vitals, symptoms, and
+                  appointments. Receive automated reminders via in-app
+                  notifications, SMS, or WhatsApp.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div
+              class="md:flex md:items-center md:space-x-8"
+              data-aos="fade-up"
+            >
+              <div class="md:w-1/2">
+                <img
+                  class="rounded-lg shadow-xl"
+                  src="http://static.photos/people/640x360/4"
+                  alt="App screenshot"
+                />
+              </div>
+              <div class="mt-8 md:mt-0 md:w-1/2">
+                <div class="flex items-center">
+                  <div
+                    class="flex items-center justify-center h-12 w-12 rounded-md bg-green-500 text-white font-bold text-xl"
+                  >
+                    3
+                  </div>
+                  <h3 class="ml-4 text-xl font-bold text-gray-900">
+                    Provider Collaboration
+                  </h3>
+                </div>
+                <p class="mt-4 text-gray-600">
+                  PHC staff view patient data, flag high-risk cases, create
+                  referrals, and send messages. All data syncs automatically
+                  when internet is available.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Technology Stack Section -->
+    <div class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h2
+            class="text-3xl font-extrabold text-gray-900 sm:text-4xl"
+            data-aos="fade-up"
+          >
+            Built with Modern Technology
+          </h2>
+          <p
+            class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            Robust, scalable, and designed for reliability
+          </p>
+        </div>
+
+        <div class="mt-16">
+          <div class="grid grid-cols-2 gap-8 md:grid-cols-4">
+            <div class="col-span-1 flex justify-center" data-aos="zoom-in">
+              <div class="p-6 bg-gray-50 rounded-lg">
+                <div
+                  class="flex items-center justify-center h-12 w-12 rounded-md bg-pink-100 text-pink-600 mx-auto"
+                >
+                  <i data-feather="smartphone" class="h-6 w-6"></i>
+                </div>
+                <div class="mt-4 text-center">
+                  <h3 class="text-lg font-medium text-gray-900">Flutter</h3>
+                  <p class="mt-1 text-sm text-gray-500">
+                    Cross-platform mobile framework
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-span-1 flex justify-center"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+            >
+              <div class="p-6 bg-gray-50 rounded-lg">
+                <div
+                  class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-100 text-blue-600 mx-auto"
+                >
+                  <i data-feather="database" class="h-6 w-6"></i>
+                </div>
+                <div class="mt-4 text-center">
+                  <h3 class="text-lg font-medium text-gray-900">Supabase</h3>
+                  <p class="mt-1 text-sm text-gray-500">
+                    Backend with PostgreSQL
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="colspan-1 flex justify-center"
+              data-aos="zoom-in"
+              data-aos-delay="200"
+            >
+              <div class="p-6 bg-gray-50 rounded-lg">
+                <div
+                  class="flex items-center justify-center h-12 w-12 rounded-md bg-green-100 text-green-600 mx-auto"
+                >
+                  <i data-feather="hard-drive" class="h-6 w-6"></i>
+                </div>
+                <div class="mt-4 text-center">
+                  <h3 class="text-lg font-medium text-gray-900">SQLite</h3>
+                  <p class="mt-1 text-sm text-gray-500">
+                    Local offline database
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-span-1 flex justify-center"
+              data-aos="zoom-in"
+              data-aos-delay="300"
+            >
+              <div class="p-6 bg-gray-50 rounded-lg">
+                <div
+                  class="flex items-center justify-center h-12 w-12 rounded-md bg-yellow-100 text-yellow-600 mx-auto"
+                >
+                  <i data-feather="shield" class="h-6 w-6"></i>
+                </div>
+                <div class="mt-4 text-center">
+                  <h3 class="text-lg font-medium text-gray-900">Secure</h3>
+                  <p class="mt-1 text-sm text-gray-500">
+                    TLS & AES-256 encryption
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Download Section -->
+    <div id="download" class="py-16 bg-pink-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white rounded-xl shadow-xl overflow-hidden">
+          <div class="lg:grid lg:grid-cols-2 lg:gap-8">
+            <div class="pt-10 pb-12 px-6 sm:pt-16 sm:px-16 lg:py-16 lg:pr-0">
+              <div class="lg:self-center">
+                <h2
+                  class="text-3xl font-extrabold text-gray-900 sm:text-4xl"
+                  data-aos="fade-up"
+                >
+                  <span class="block">Ready to improve</span>
+                  <span class="block text-pink-500">maternal health?</span>
+                </h2>
+                <p
+                  class="mt-4 text-lg text-gray-600"
+                  data-aos="fade-up"
+                  data-aos-delay="100"
+                >
+                  Download MaternalCare today for Android devices. Coming soon
+                  to iOS.
+                </p>
+                <div
+                  class="mt-8 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4"
+                >
+                  <a
+                    href="#"
+                    class="flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-pink-500 hover:bg-pink-600 md:py-4 md:text-lg md:px-10"
+                    data-aos="zoom-in"
+                    data-aos-delay="200"
+                  >
+                    <i data-feather="download" class="mr-2"></i> Download APK
+                  </a>
+                  <a
+                    href="#"
+                    class="flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-pink-700 bg-pink-100 hover:bg-pink-200 md:py-4 md:text-lg md:px-10"
+                    data-aos="zoom-in"
+                    data-aos-delay="300"
+                  >
+                    <i data-feather="smartphone" class="mr-2"></i> Google Play
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="-mt-6 aspect-w-5 aspect-h-3 md:aspect-w-2 md:aspect-h-1"
+            >
+              <img
+                class="transform translate-x-6 translate-y-6 rounded-md object-cover object-left-top"
+                src="http://static.photos/people/640x360/5"
+                alt="App screenshot"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact" class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h2
+            class="text-3xl font-extrabold text-gray-900 sm:text-4xl"
+            data-aos="fade-up"
+          >
+            Contact Us
+          </h2>
+          <p
+            class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            Have questions? We're here to help.
+          </p>
+        </div>
+
+        <div class="mt-12">
+          <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+            <div class="bg-white rounded-lg shadow-xl p-6" data-aos="fade-up">
+              <div class="flex items-center">
+                <div class="shrink-0 bg-pink-100 rounded-md p-3">
+                  <i data-feather="mail" class="h-6 w-6 text-pink-600"></i>
+                </div>
+                <div class="ml-4">
+                  <h3 class="text-lg font-medium text-gray-900">Email</h3>
+                  <p class="mt-1 text-sm text-gray-600">
+                    contact@maternalcare.app
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-white rounded-lg shadow-xl p-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="flex items-center">
+                <div class="shrink-0 bg-blue-100 rounded-md p-3">
+                  <i data-feather="phone" class="h-6 w-6 text-blue-600"></i>
+                </div>
+                <div class="ml-4">
+                  <h3 class="text-lg font-medium text-gray-900">Phone</h3>
+                  <p class="mt-1 text-sm text-gray-600">+234 800 123 4567</p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-white rounded-lg shadow-xl p-6"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="flex items-center">
+                <div class="shrink-0 bg-green-100 rounded-md p-3">
+                  <i data-feather="map-pin" class="h-6 w-6 text-green-600"></i>
+                </div>
+                <div class="ml-4">
+                  <h3 class="text-lg font-medium text-gray-900">Office</h3>
+                  <p class="mt-1 text-sm text-gray-600">Lagos, Nigeria</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800">
+      <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div>
+            <h3
+              class="text-sm font-semibold text-gray-400 tracking-wider uppercase"
+            >
+              Product
+            </h3>
+            <ul class="mt-4 space-y-2">
+              <li>
+                <a
+                  href="#features"
+                  class="text-base text-gray-300 hover:text-white"
+                  >Features</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#how-it-works"
+                  class="text-base text-gray-300 hover:text-white"
+                  >How It Works</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#download"
+                  class="text-base text-gray-300 hover:text-white"
+                  >Download</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3
+              class="text-sm font-semibold text-gray-400 tracking-wider uppercase"
+            >
+              Resources
+            </h3>
+            <ul class="mt-4 space-y-2">
+              <li>
+                <a href="#" class="text-base text-gray-300 hover:text-white"
+                  >Documentation</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-base text-gray-300 hover:text-white"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-base text-gray-300 hover:text-white"
+                  >Terms of Service</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3
+              class="text-sm font-semibold text-gray-400 tracking-wider uppercase"
+            >
+              Company
+            </h3>
+            <ul class="mt-4 space-y-2">
+              <li>
+                <a href="#" class="text-base text-gray-300 hover:text-white"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-base text-gray-300 hover:text-white"
+                  >Careers</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="text-base text-gray-300 hover:text-white"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3
+              class="text-sm font-semibold text-gray-400 tracking-wider uppercase"
+            >
+              Connect
+            </h3>
+            <div class="mt-4 flex space-x-6">
+              <a href="#" class="text-gray-400 hover:text-white">
+                <i data-feather="facebook" class="h-6 w-6"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-white">
+                <i data-feather="twitter" class="h-6 w-6"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-white">
+                <i data-feather="instagram" class="h-6 w-6"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-white">
+                <i data-feather="linkedin" class="h-6 w-6"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="mt-8 border-t border-gray-700 pt-8 md:flex md:items-center md:justify-between"
+        >
+          <div class="flex space-x-6 md:order-2">
+            <span class="inline-flex items-center text-gray-400 text-sm">
+              <i data-feather="globe" class="mr-2 h-4 w-4"></i> English/Yoruba
+            </span>
+          </div>
+          <p class="mt-8 text-base text-gray-400 md:mt-0 md:order-1">
+            &copy; 2023 MaternalCare. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      document
+        .getElementById("mobile-menu-button")
+        .addEventListener("click", function () {
+          const menu = document.getElementById("mobile-menu");
+          menu.classList.toggle("hidden");
+        });
+
+      // Initialize AOS
+      AOS.init({
+        duration: 800,
+        once: true,
+      });
+
+      // Initialize Feather Icons
+      feather.replace();
+    </script>
+  </body>
+</html>
