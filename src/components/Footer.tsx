@@ -99,6 +99,7 @@ export function Footer() {
                       <motion.a
                         key={link.label || index}
                         href={link.href}
+                        onClick={(e) => e.preventDefault()}
                         className="text-base text-[#9CA3AF] hover:text-white transition-colors"
                         initial={{ opacity: 0, scale: 0.8 }}
                         whileInView={{ opacity: 1, scale: 1 }}
