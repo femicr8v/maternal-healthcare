@@ -26,6 +26,8 @@ import type {
   NavType,
 } from "./type";
 
+import { collaboration, personalized, simple1 } from "../assets";
+
 export const navItems: NavType[] = [
   {
     label: "Features",
@@ -96,7 +98,7 @@ export const how_it_works: HowItWorksType[] = [
     title: "Simple Registration",
     description:
       "Pregnant women register with phone number via OTP. Healthcare providers use email or password with optional 2FA. Role-based access ensures data security.",
-    image: "src/assets/simple-1.png",
+    image: simple1,
     color: "bg-accent",
   },
   {
@@ -104,7 +106,7 @@ export const how_it_works: HowItWorksType[] = [
     title: "Personalized Tracking",
     description:
       "Enter LMP to calculate EDD. Track vitals, symptoms, and appointments. Receive automated reminders via in-app notifications, SMS, or WhatsApp.",
-    image: "src/assets/personalized.png",
+    image: personalized,
     color: "bg-primary",
   },
   {
@@ -112,7 +114,7 @@ export const how_it_works: HowItWorksType[] = [
     title: "Provider Collaboration",
     description:
       "PHC staff view patient data, flag high-risk cases, create referrals, and send messages. All data syncs automatically when internet is available.",
-    image: "src/assets/collaboration.png",
+    image: collaboration,
     color: "bg-status-green",
   },
 ];

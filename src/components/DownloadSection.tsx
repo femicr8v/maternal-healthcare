@@ -1,13 +1,14 @@
-import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
-import { Button, buttonVariants } from "./ui/button";
+import { motion } from "framer-motion";
+import { bookPdf, ctaImg } from "@/assets";
 import { Download, Smartphone } from "lucide-react";
+import { Button, buttonVariants } from "./ui/button";
 
 export function DownloadSection() {
   return (
     <div
       id="download"
-      className="bg-linear-to-r from-accent to-muted py-12 md:py-20"
+      className="bg-linear-to-r from-accent to-muted py-12 md:py-32"
     >
       <motion.div
         className="width bg-white rounded-xl shadow-xl overflow-hidden"
@@ -69,7 +70,7 @@ export function DownloadSection() {
               transition={{ duration: 0.6, delay: 1.2 }}
             >
               <motion.a
-                href="src\assets\the-50th-law.pdf"
+                href={bookPdf}
                 className={cn(
                   buttonVariants({ variant: "default", size: "default" }),
                   "max-md:w-full bg-linear-to-r from-accent to-muted text-white hover:opacity-90 h-14 lg:h-16 px-6 md:px-10 lg:md:px-6 xl:px-10"
@@ -118,7 +119,7 @@ export function DownloadSection() {
           >
             <motion.img
               className="rounded-lg lg:rounded-l-none object-cover object-left-top w-full h-full"
-              src="src\assets\cta.jpg"
+              src={ctaImg}
               alt="Healthcare app screenshot"
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}

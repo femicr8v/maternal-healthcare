@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import { whiteLogo } from "@/assets";
 import { Menu, X } from "lucide-react";
 import { navItems } from "@/lib/constants";
 import { Button, buttonVariants } from "./ui/button";
@@ -29,11 +30,11 @@ export function Navigation() {
             whileTap={{ scale: 0.95 }}
           >
             <motion.img
-              src="src\assets\logo-w.svg"
-              alt=""
+              src={whiteLogo}
+              alt="logo"
               className="size-9 p-2.5 bg-primary rounded-lg"
-              whileHover={{ rotate: 360 }}
-              transition={{ duration: 0.6 }}
+              // whileHover={{ rotate: 360 }}
+              // transition={{ duration: 0.6 }}
             />
             MaternalCare
           </motion.a>

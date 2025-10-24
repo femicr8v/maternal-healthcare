@@ -1,5 +1,6 @@
-import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { heroImg3 } from "@/assets";
+import { motion } from "framer-motion";
 import { buttonVariants } from "./ui/button";
 
 export function HeroSection() {
@@ -91,7 +92,7 @@ export function HeroSection() {
           >
             <img
               className="rounded-lg w-full h-full"
-              src="src\assets\img-3.jpg"
+              src={heroImg3}
               alt="Healthcare professional with tablet"
             />
           </motion.div>
