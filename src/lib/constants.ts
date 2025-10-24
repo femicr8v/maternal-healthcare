@@ -96,8 +96,7 @@ export const how_it_works: HowItWorksType[] = [
     title: "Simple Registration",
     description:
       "Pregnant women register with phone number via OTP. Healthcare providers use email or password with optional 2FA. Role-based access ensures data security.",
-    image:
-      "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=640&h=360&q=80",
+    image: "src/assets/simple-1.png",
     color: "bg-accent",
   },
   {
@@ -105,8 +104,7 @@ export const how_it_works: HowItWorksType[] = [
     title: "Personalized Tracking",
     description:
       "Enter LMP to calculate EDD. Track vitals, symptoms, and appointments. Receive automated reminders via in-app notifications, SMS, or WhatsApp.",
-    image:
-      "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=640&h=360&q=80",
+    image: "src/assets/personalized.png",
     color: "bg-primary",
   },
   {
@@ -114,8 +112,7 @@ export const how_it_works: HowItWorksType[] = [
     title: "Provider Collaboration",
     description:
       "PHC staff view patient data, flag high-risk cases, create referrals, and send messages. All data syncs automatically when internet is available.",
-    image:
-      "https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=640&h=360&q=80",
+    image: "src/assets/collaboration.png",
     color: "bg-status-green",
   },
 ];

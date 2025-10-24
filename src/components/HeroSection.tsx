@@ -96,13 +96,13 @@ export function HeroSection() {
             />
           </motion.div>
           <motion.div
-            className="absolute -top-3 sm:-top-8 -right-5 sm:-right-8 bg-destructive-foreground/50 rounded-lg sm:rounded-xl shadow-xl w-16 h-24 sm:size-32 -z-10"
+            className="absolute -top-3 sm:-top-8 -right-4 sm:-right-8 bg-destructive-foreground/50 rounded-lg sm:rounded-xl shadow-xl w-16 h-24 sm:size-32 -z-10"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.8 }}
           />
           <motion.div
-            className="absolute -bottom-8 -left-5 sm:-left-8 lg:-left-5 xl:-left-8 bg-primary/15 rounded-lg sm:rounded-xl shadow-xl w-16 h-24 sm:size-32 -z-10"
+            className="absolute -bottom-8 -left-4 sm:-left-8 lg:-left-5 xl:-left-8 bg-primary/15 rounded-lg sm:rounded-xl shadow-xl w-16 h-24 sm:size-32 -z-10"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 1.0 }}

@@ -21,7 +21,8 @@ export default function HowItWorksCard({ step, index }: Props) {
         className={`rounded-lg shadow-xl w-full h-auto ${
           index % 2 === 1 && "md:order-1"
         }`}
-        src="src\assets\img-3.jpg"
+        // src="src\assets\img-3.jpg"
+        src={step.image}
         alt={`Step ${step.number} illustration`}
         initial={{ opacity: 0, x: isEven ? -50 : 50 }}
         whileInView={{ opacity: 1, x: 0 }}

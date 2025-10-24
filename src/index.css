@@ -1,11 +1,13 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"); */
-
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 @import "tailwindcss";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
+
+@theme {
+  --breakpoint-xs: 22rem;
+}
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
@@ -107,13 +109,12 @@
   body {
     @apply bg-background text-secondary-foreground text-base;
     font-family: "Poppins", sans-serif;
-    /* font-family: "Roboto", sans-serif; */
   }
   html {
     scroll-behavior: smooth;
   }
   .width {
-    @apply max-md:max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-7xl mx-auto;
+    @apply xs:max-w-[350px] sm:max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-7xl mx-auto;
   }
 
   .padding-x {
