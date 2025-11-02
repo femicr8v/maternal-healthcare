@@ -4,7 +4,7 @@ import { HeroSection } from "./components/HeroSection";
 import { ContactSection } from "./components/ContactSection";
 import { FeaturesSection } from "./components/FeaturesSection";
 import { DownloadSection } from "./components/DownloadSection";
-import { TechnologySection } from "./components/TechnologySection";
+// import { TechnologySection } from "./components/TechnologySection";
 import { HowItWorksSection } from "./components/HowItWorksSection";
 
 function App() {
