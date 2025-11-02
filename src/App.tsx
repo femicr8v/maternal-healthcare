@@ -14,7 +14,7 @@ function App() {
       <HeroSection />
       <FeaturesSection />
       <HowItWorksSection />
-      <TechnologySection />
+      {/* <TechnologySection /> */}
       <DownloadSection />
       <ContactSection />
       <Footer />

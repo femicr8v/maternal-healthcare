@@ -133,7 +133,12 @@ export function Navigation() {
                   {nav.href === "#download" ? (
                     <motion.a
                       href={nav.href}
-                      onClick={() => setIsMenuOpen((prev) => !prev)}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        const section = document.querySelector(nav.href);
+                        section?.scrollIntoView({ behavior: "smooth" });
+                        setTimeout(() => setIsMenuOpen(false), 700);
+                      }}
                       className={cn(
                         buttonVariants({ variant: "default", size: "default" }),
                         "w-full"
@@ -145,7 +150,12 @@ export function Navigation() {
                   ) : (
                     <motion.a
                       href={nav.href}
-                      onClick={() => setIsMenuOpen((prev) => !prev)}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        const section = document.querySelector(nav.href);
+                        section?.scrollIntoView({ behavior: "smooth" });
+                        setTimeout(() => setIsMenuOpen(false), 700);
+                      }}
                       className="text-secondary focus:text-primary active:text-primary font-medium transition-colors duration-300"
                       whileTap={{ scale: 0.95 }}
                     >

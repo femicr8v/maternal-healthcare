@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
-import { bookPdf, ctaImg } from "@/assets";
+import { mhcApp, ctaImg } from "@/assets";
 import { Download, Smartphone } from "lucide-react";
 import { Button, buttonVariants } from "./ui/button";
 
@@ -17,7 +17,7 @@ export function DownloadSection() {
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <div className="grid lg:grid-cols-2 gap-4 md:gap-4 items-stretch">
+        <div className="grid lg:grid-cols-2 gap-4 md:gap-4 items-stretch xl:items-center">
           <motion.div
             className="p-8 pb-2 lg:p-12 lg:pe-0 xl:p-16 space-y-2"
             initial={{ opacity: 0, x: -50 }}
@@ -70,7 +70,7 @@ export function DownloadSection() {
               transition={{ duration: 0.6, delay: 1.2 }}
             >
               <motion.a
-                href={bookPdf}
+                href={mhcApp}
                 className={cn(
                   buttonVariants({ variant: "default", size: "default" }),
                   "max-md:w-full bg-linear-to-r from-accent to-muted text-white hover:opacity-90 h-14 lg:h-16 px-6 md:px-10 lg:md:px-6 xl:px-10"

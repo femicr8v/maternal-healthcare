@@ -10,7 +10,8 @@ import collaboration from "./collaboration.png";
 import personalized from "./personalized.png";
 import simple from "./simple.png";
 import simple1 from "./simple-1.png";
-import bookPdf from "./the-50th-law.pdf";
+
+import mhcApp from "./app-release.apk";
 
 export {
   whiteLogo,
@@ -23,5 +24,5 @@ export {
   personalized,
   simple,
   simple1,
-  bookPdf,
+  mhcApp,
 };
